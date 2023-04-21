@@ -8,8 +8,7 @@
       "android",
       "wp8",
       "windows",
-      "blackberry10",
-      "ios"
+      "blackberry10"
     ]
   },
   "repository": {
@@ -24,8 +23,7 @@
     "cordova-android",
     "cordova-wp8",
     "cordova-windows",
-    "cordova-blackberry10",
-    "cordova-ios"
+    "cordova-blackberry10"
   ],
   "author": "Don Coleman <don.coleman@gmail.com>",
   "license": "MIT",

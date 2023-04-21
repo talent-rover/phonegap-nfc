@@ -15,7 +15,7 @@ This plugin uses NDEF (NFC Data Exchange Format) for maximum compatibilty betwee
 Supported Platforms
 -------------------
 * Android
-* [iOS 11](#ios-notes)
+* [~~iOS 11~~](#ios-notes)
 * Windows (includes Windows Phone 8.1, Windows 8.1, Windows 10)
 * BlackBerry 10
 * Windows Phone 8
@@ -62,7 +62,7 @@ BlackBerry 7 support is only available for Cordova 2.x. For applications targeti
 
 See [Getting Started](https://github.com/chariotsolutions/phonegap-nfc/blob/master/doc/GettingStartedCLI.md) and [Getting Started BlackBerry 10](https://github.com/chariotsolutions/phonegap-nfc/blob/master/doc/GettingStartedBlackberry10.md)for more details.
 
-## iOS Notes
+## ~~iOS Notes~~ (no iOS support)
 
 Reading NFC NDEF tags is supported on iPhone 7 (and newer) since iOS 11. iOS 13 added support for writing NDEF messages to NFC tags. iOS 13 also adds the ability to get the UID from some NFC tags. On iOS, the user must start a NFC session to scan for a tag. This is different from Android which can constantly scan for NFC tags. The [nfc.scanNdef](#nfcscanndef) and [nfc.scanTag](#nfcscantag) functions start a NFC scanning session. The NFC tag is returned to the caller via a Promise. If your existing code uses the deprecated [nfc.beginSession](#nfcbeginsession), update it to use `nfc.scanNdef`.
 
@@ -131,12 +131,12 @@ For BlackBerry 10, you must configure the type of tags your application will rea
 
 On Android registered [mimeTypeListeners](#nfcaddmimetypelistener) takes precedence over this more generic NDEF listener.
 
-On iOS you must call [beingSession](#nfcbeginsession) before scanning a tag.
+~~On iOS you must call [beingSession](#nfcbeginsession) before scanning a tag.~~
 
 ### Supported Platforms
 
 - Android
-- iOS
+- ~~iOS~~
 - Windows
 - BlackBerry 7
 - BlackBerry 10
@@ -159,7 +159,7 @@ Removing listeners is not recommended. Instead, consider that your callback can 
 ### Supported Platforms
 
 - Android
-- iOS
+- ~~iOS~~
 - Windows
 - BlackBerry 7
 
@@ -307,7 +307,7 @@ Function `nfc.write` writes an NdefMessage to a NFC tag.
 
 On **Android** this method *must* be called from within an NDEF Event Handler.
 
-On **iOS** this method can be called outside the NDEF Event Handler, it will start a new scanning session. Optionally you can reuse the read session to write data. See example below.
+~~On **iOS** this method can be called outside the NDEF Event Handler, it will start a new scanning session. Optionally you can reuse the read session to write data. See example below.~~
 
 On **Windows** this method *may* be called from within the NDEF Event Handler.
 
@@ -378,7 +378,7 @@ On iOS you can optionally write to NFC tag using the read session
 ### Supported Platforms
 
 - Android
-- iOS
+- ~~iOS~~
 - Windows
 - BlackBerry 7
 - Windows Phone 8
@@ -610,7 +610,7 @@ Windows will return **NO_NFC_OR_NFC_DISABLED** when NFC is not present or disabl
 ### Supported Platforms
 
 - Android
-- iOS
+- ~~iOS~~
 - Windows
 
 ## nfc.beginSession
